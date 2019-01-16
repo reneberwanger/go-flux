@@ -1,0 +1,8 @@
+.col .chip {
+    margin-bottom: 5px;
+}
+
+.modal .expansion-panel.show {
+    box-shadow: none;
+}
+

@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+
+    <!-- CSS -->
+    <!-- Add Material font (Roboto) and Material icon as needed -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Add Material CSS, replace Bootstrap CSS -->
+    <link href="node_modules/daemonite-material/css/material.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="main-menu">
+    <header class="navbar navbar-dark navbar-full bg-primary doc-navbar-default">
+        <button aria-controls="navdrawerDefault" aria-expanded="false" aria-label="Toggle Navdrawer"
+                class="navbar-toggler" data-target="#navdrawerDefault" data-toggle="navdrawer"><span
+                class="navbar-toggler-icon"></span></button>
+        <span class="navbar-brand mr-auto">HEADER</span>
+    </header>
+    <div aria-hidden="false" class="navdrawer" id="navdrawerDefault" tabindex="-1">
+        <div class="navdrawer-content">
+            <div class="navdrawer-header">
+                <a class="navbar-brand px-0" href="#">MENU</a>
+            </div>
+            <nav class="navdrawer-nav">
+                <a class="nav-item nav-link active" href="#">Active</a>
+                <a class="nav-item nav-link disabled" href="#">Disabled</a>
+                <a class="nav-item nav-link" href="#">Link</a>
+            </nav>
+            <div class="navdrawer-divider"></div>
+            <p class="navdrawer-subheader">Sub Menu</p>
+            <ul class="navdrawer-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#"><i class="material-icons mr-3">alarm_on</i> Active with icon</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#"><i class="material-icons mr-3">alarm_off</i> Disabled with
+                        icon</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="material-icons mr-3">link</i> Link with icon</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="col-12 py-5">
+        <div class="col-6">
+            <ul class="nav nav-justified nav-tabs" id="justifiedTab" role="tablist">
+                <li class="nav-item">
+                    <a aria-controls="home" aria-selected="true" class="nav-link active" data-toggle="tab" href="#offers" role="tab">Gerenciar Oferta</a>
+                </li>
+                <li class="nav-item">
+                    <a aria-controls="profile" aria-selected="false" class="nav-link" data-toggle="tab" href="#proposals" role="tab">Gerenciar Propostas</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-12">
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="offers" role="tabpanel">
+                    <div class="col-12 border p-5">
+                        <form>
+
+                            <fieldset>
+                                <legend>Dados da Oferta</legend>
+                                <div class="form-row py-3">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <div class="floating-label">
+                                                <label for="selOppurtunityType">Seleção</label>
+                                                <select class="form-control" id="selOppurtunityType">
+                                                    <option></option>
+                                                    <option>Opções A</option>
+                                                    <option>Opções B</option>
+                                                    <option>Opções C</option>
+                                                    <option>Opções D</option>
+                                                    <option>Opções E</option>
+                                                    <option>Opções F</option>
+                                                </select>
+                                            </div>
+                                            <small class="form-text text-muted">
+                                                Mensagens de explicação abaixo de cada
+                                                campo, quando for um campo complicado.
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <div class="floating-label">
+                                                <label for="txtDisabled">Desabilitado</label>
+                                                <input type="text" id="txtDisabled" class="form-control"
+                                                       disabled
+                                                       placeholder="Disabilitado">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="form-row py-3">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <div class="floating-label">
+                                                <label for="txtDefault">Campo padrão</label>
+                                                <input type="text" id="txtDefault" class="form-control"
+                                                       placeholder="Campo padrão">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <div class="floating-label">
+                                                <label for="txtName">Campo válido</label>
+                                                <input type="text" id="txtName" class="form-control is-valid"
+                                                       placeholder="Nome do Produtor">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row py-3">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <div class="floating-label">
+                                                <label for="txtName">Campo Inválido</label>
+                                                <input type="text" id="txtName" class="form-control is-invalid"
+                                                       placeholder="Campo Inválido">
+                                                <small class="form-text invalid-feedback">
+                                                    Preencha o campo corretamente
+                                                </small>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="floating-label">
+                                                            <label for="txtDate">Selecione uma data</label>
+                                                            <input type="text" id="txtDate" date-picker
+                                                                   class="form-control is-valid"
+                                                                   placeholder="Selecione uma data">
+                                                        </div>
+                                                        <span class="input-group-icon">
+                                                            <i class="material-icons">event</i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="floating-label">
+                                                            <label for="txtPhone">Telefone</label>
+                                                            <input type="text" id="txtPhone"
+                                                                   class="form-control is-valid"
+                                                                   placeholder="(  )     .    ">
+                                                        </div>
+                                                        <span class="input-group-icon">
+                                                            <i class="material-icons">phone</i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Rotas</legend>
+                                <div class="form-row py-3">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#create-route">
+                                            Criar Rota
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <table class="table table-hover table-sm">
+                                        <thead>
+                                        <tr>
+                                            <th>Ordem</th>
+                                            <th>Coleta</th>
+                                            <th>Entrega</th>
+                                            <th>Valor / Tonelada</th>
+                                            <th width="15%"></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <div class="font-weight-bold mb-1">16/10/2019</div>
+                                                Rua lorem ipsum, 724, Moema. <br>
+                                                São Paulo - São Paulo.
+                                            </td>
+                                            <td>
+                                                <div class="font-weight-bold mb-1">20/10/2019</div>
+                                                Rua lorem ipsum, 724, Pelourinho. <br>
+                                                Salvador - Bahia.
+                                            </td>
+                                            <td>
+                                                <b>R$ 99,50</b>
+                                            </td>
+                                            <td class="text-right">
+                                                <button type="button" class="btn btn-sm btn-outline-dark">
+                                                    <i class="material-icons">edit</i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-outline-danger">
+                                                    <i class="material-icons">delete</i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>
+                                                <div class="font-weight-bold mb-1">16/10/2019</div>
+                                                Rua lorem ipsum, 724, Moema. <br>
+                                                São Paulo - São Paulo.
+                                            </td>
+                                            <td>
+                                                <div class="font-weight-bold mb-1">20/10/2019</div>
+                                                Rua lorem ipsum, 724, Pelourinho. <br>
+                                                Salvador - Bahia.
+                                            </td>
+                                            <td>
+                                                <b>R$ 99,50</b>
+                                            </td>
+                                            <td class="text-right">
+                                                <button type="button" class="btn btn-sm btn-outline-dark">
+                                                    <i class="material-icons">edit</i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-outline-danger">
+                                                    <i class="material-icons">delete</i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>
+                                                <div class="font-weight-bold mb-1">16/10/2019</div>
+                                                Rua lorem ipsum, 724, Moema. <br>
+                                                São Paulo - São Paulo.
+                                            </td>
+                                            <td>
+                                                <div class="font-weight-bold mb-1">20/10/2019</div>
+                                                Rua lorem ipsum, 724, Pelourinho. <br>
+                                                Salvador - Bahia.
+                                            </td>
+                                            <td>
+                                                <b>R$ 99,50</b>
+                                            </td>
+                                            <td class="text-right">
+                                                <button type="button" class="btn btn-sm btn-outline-dark">
+                                                    <i class="material-icons">edit</i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-outline-danger">
+                                                    <i class="material-icons">delete</i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>
+                                                <div class="font-weight-bold mb-1">16/10/2019</div>
+                                                Rua lorem ipsum, 724, Moema. <br>
+                                                São Paulo - São Paulo.
+                                            </td>
+                                            <td>
+                                                <div class="font-weight-bold mb-1">20/10/2019</div>
+                                                Rua lorem ipsum, 724, Pelourinho. <br>
+                                                Salvador - Bahia.
+                                            </td>
+                                            <td>
+                                                <b>R$ 99,50</b>
+                                            </td>
+                                            <td class="text-right">
+                                                <button type="button" class="btn btn-sm btn-outline-dark">
+                                                    <i class="material-icons">edit</i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-outline-danger">
+                                                    <i class="material-icons">delete</i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="form-row card my-5 p-2">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m34!1m12!1m3!1d4042306.9866946195!2d-39.305466573464145!3d-8.34590366838896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m19!3e0!4m5!1s0x716112050422ebd%3A0xf71c84369573db9d!2sSalvador%2C+BA!3m2!1d-12.9777378!2d-38.5016363!4m5!1s0x7c74c3f464c783f%3A0x4661c60a0c6b37ca!2sFortaleza+-+CE!3m2!1d-3.7327144!2d-38.5269981!4m5!1s0x7ab18a2a565885f%3A0x802b0e52579b84b7!2sRecife%2C+PE!3m2!1d-8.054074!2d-34.8708494!5e0!3m2!1spt-BR!2sbr!4v1547525645531" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Fornecedores</legend>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <ul class="nav nav-justified nav-tabs" role="tablist">
+                                            <li class="nav-item">
+                                                <a aria-controls="home" aria-selected="true" class="nav-link active" data-toggle="tab" href="#all" role="tab">Todos</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a aria-controls="home" aria-selected="false" class="nav-link" data-toggle="tab" href="#others" role="tab">GRUPOS</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="all" role="tabpanel">
+
+                                        <div class="py-5">
+                                            <div class="form-row">
+                                                <div class="col-4">
+                                                    <div class="form-group">
+                                                        <div class="input-group">
+                                                            <div class="floating-label">
+                                                                <label for="txtSearch">Procurar</label>
+                                                                <input type="text" id="txtSearch"
+                                                                       class="form-control"
+                                                                       placeholder="Procurar">
+                                                            </div>
+                                                            <span class="input-group-icon">
+                                                                <i class="material-icons">search</i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-1">
+                                                    <button class="btn btn-flat btn-flat-secondary mt-3" type="button" data-toggle="modal" data-target="#see-all">VER TODOS</button>
+                                                </div>
+                                                <div class="col">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="others" role="tabpanel">
+                                        <div class="py-5">
+                                            <div class="form-row">
+                                                <div class="col-2">
+                                                    <div class="form-group">
+                                                        <div class="floating-label">
+                                                            <label for="selGroup">Grupos</label>
+                                                            <select class="form-control" id="selGroup">
+                                                                <option></option>
+                                                                <option>Opções A</option>
+                                                                <option>Opções B</option>
+                                                                <option>Opções C</option>
+                                                                <option>Opções D</option>
+                                                                <option>Opções E</option>
+                                                                <option>Opções F</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="form-group">
+                                                        <div class="input-group">
+                                                            <div class="floating-label">
+                                                                <label for="txtSearchB">Procurar</label>
+                                                                <input type="text" id="txtSearchB" class="form-control" placeholder="Procurar">
+                                                            </div>
+                                                            <span class="input-group-icon">
+                                                                <i class="material-icons">search</i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-1">
+                                                    <button class="btn btn-flat btn-flat-secondary mt-3" type="button" data-toggle="modal" data-target="#see-all">VER TODOS</button>
+                                                </div>
+
+                                                <!--CHIPS-->
+                                                <div class="col">
+                                                    <div class="chip fade show" id="chip-0" data-toggle="popover" data-trigger="hover">
+                                                        Amet Diam
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-0" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-1" data-toggle="popover" data-trigger="hover">
+                                                        Ornare Gravida Sodales
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-1" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-2" data-toggle="popover" data-trigger="hover">
+                                                        Amet Et
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-2" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-3" data-toggle="popover" data-trigger="hover">
+                                                        Proin Gravida In
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-3" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-4" data-toggle="popover" data-trigger="hover">
+                                                        Lorem Proin
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-4" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-5" data-toggle="popover" data-trigger="hover">
+                                                        Elit Diam Cras
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-5" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-6" data-toggle="popover" data-trigger="hover">
+                                                        Ipsum Sit In
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-6" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-7" data-toggle="popover" data-trigger="hover">
+                                                        Sit Et
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-7" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-8" data-toggle="popover" data-trigger="hover">
+                                                        Consectetur Elit Cras
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-8" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-9" data-toggle="popover" data-trigger="hover">
+                                                        Proin Diam Gravida
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-9" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-10" data-toggle="popover" data-trigger="hover">
+                                                        Amet Elit Gravida
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-10" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-11" data-toggle="popover" data-trigger="hover">
+                                                        Amet Proin Commodo
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-11" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-12" data-toggle="popover" data-trigger="hover">
+                                                        Elit Gravida
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-12" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-13" data-toggle="popover" data-trigger="hover">
+                                                        Adipiscing Proin Diam
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-13" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-14" data-toggle="popover" data-trigger="hover">
+                                                        Lorem Et
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-14" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-15" data-toggle="popover" data-trigger="hover">
+                                                        Adipiscing Proin Et
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-15" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-16" data-toggle="popover" data-trigger="hover">
+                                                        Lorem Adipiscing Gravida
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-16" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-17" data-toggle="popover" data-trigger="hover">
+                                                        Sit Et
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-17" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-18" data-toggle="popover" data-trigger="hover">
+                                                        Ipsum Consectetur Gravida
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-18" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-19" data-toggle="popover" data-trigger="hover">
+                                                        Lorem Dapibus Ornare
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-19" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-20" data-toggle="popover" data-trigger="hover">
+                                                        Sit Dapibus Et
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-20" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-21" data-toggle="popover" data-trigger="hover">
+                                                        Adipiscing Proin
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-21" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-22" data-toggle="popover" data-trigger="hover">
+                                                        Sit Proin Commodo
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-22" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-23" data-toggle="popover" data-trigger="hover">
+                                                        Adipiscing Dapibus Diam
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-23" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-24" data-toggle="popover" data-trigger="hover">
+                                                        Lorem Et In
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-24" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-25" data-toggle="popover" data-trigger="hover">
+                                                        Lorem Dolor Diam
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-25" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-26" data-toggle="popover" data-trigger="hover">
+                                                        Amet Consectetur Arcu
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-26" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-27" data-toggle="popover" data-trigger="hover">
+                                                        Lorem Ipsum
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-27" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-28" data-toggle="popover" data-trigger="hover">
+                                                        Adipiscing Diam
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-28" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-29" data-toggle="popover" data-trigger="hover">
+                                                        Consectetur Arcu
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-29" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-30" data-toggle="popover" data-trigger="hover">
+                                                        Et Ornare
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-30" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-31" data-toggle="popover" data-trigger="hover">
+                                                        Dapibus Cras
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-31" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip fade show" id="chip-32" data-toggle="popover" data-trigger="hover">
+                                                        Elit Proin
+                                                        <button class="close" data-dismiss="alert" data-target="#chip-32" type="button">
+                                                            <i class="material-icons">cancel</i>
+                                                        </button>
+                                                        <div class="popover invisible">
+                                                            <h6>Rene Berwanger</h6>
+                                                            <p><i class="material-icons">phone</i> (51) 98533.2011</p>
+                                                            <p><i class="material-icons">mail</i> rene.berwanger@outlook.com</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="text-right">
+                                <button type="button" class="btn btn-flat btn-flat-secondary">CANCELAR</button>
+                                <button type="button" class="btn btn-primary snackbar-toggler">SALVAR</button>
+                            </fieldset>
+
+
+                        </form>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="proposals" role="tabpanel">...</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+<!-- Then Material JavaScript on top of Bootstrap JavaScript -->
+<script src="node_modules/daemonite-material/js/material.min.js"></script>
+<script src="main.js"></script>
+
+<!--ROTAS-->
+<div class="modal fade" id="create-route" tabindex="-1" role="dialog" aria-labelledby="create-route"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Nova Rota</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+
+                    <div class="list-group" id="accordionOne">
+
+                        <!--CARGA E VALOR-->
+
+                        <div class="expansion-panel list-group-item show">
+                            <a aria-controls="collapseThree" aria-expanded="true" class="expansion-panel-toggler collapsed" data-toggle="collapse" href="#collapseThree" id="headingThree">
+                                <span class="font-weight-bold">Carga e Valor</span>
+                                <div class="expansion-panel-icon ml-3 text-black-secondary">
+                                    <i class="collapsed-hide material-icons">keyboard_arrow_down</i>
+                                    <i class="collapsed-show material-icons">keyboard_arrow_up</i>
+                                </div>
+                            </a>
+                            <div aria-labelledby="headingThree" class="collapsed" data-parent="#accordionOne" id="collapseThree">
+                                <div class="expansion-panel-body">
+                                    <fieldset>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="floating-label">
+                                                            <label for="txtProduct">Produto</label>
+                                                            <input type="text" id="txtProduct"
+                                                                   class="form-control"
+                                                                   placeholder="Produto">
+                                                        </div>
+                                                        <span class="input-group-icon">
+                                                                <i class="material-icons">search</i>
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col px-5">
+                                                <div class="chip fade show" id="chip-CCC">
+                                                    Amet Diam
+                                                    <button class="close" data-dismiss="alert" data-target="#chip-CCC" type="button">
+                                                        <i class="material-icons">cancel</i>
+                                                    </button>
+                                                </div>
+                                                <div class="chip fade show" id="chip-BBB">
+                                                    Ornare Gravida Sodales
+                                                    <button class="close" data-dismiss="alert" data-target="#chip-BBB" type="button">
+                                                        <i class="material-icons">cancel</i>
+                                                    </button>
+
+                                                </div>
+                                                <div class="chip fade show" id="chip-AAA">
+                                                    Amet Et
+                                                    <button class="close" data-dismiss="alert" data-target="#chip-AAA" type="button">
+                                                        <i class="material-icons">cancel</i>
+                                                    </button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col py-5">
+                                                <div class="form-group">
+                                                    <label for="txtDescription">Descrição</label>
+                                                    <textarea class="form-control" id="txtDescription" rows="3"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="floating-label">
+                                                            <label for="txtTon2">Valor Proposto / TON</label>
+                                                            <input type="text" id="txtTon2" class="form-control" placeholder="R$ / TON">
+                                                        </div>
+                                                        <span class="input-group-icon">
+                                                            <i class="material-icons">attach_money</i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="floating-label">
+                                                            <label for="txtValueA">Valor Orçado / TON</label>
+                                                            <input type="text" id="txtValueA" class="form-control" placeholder="Valor Orçado / TON">
+                                                        </div>
+                                                        <span class="input-group-icon">
+                                                            <i class="material-icons">attach_money</i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--COLETA-->
+
+                        <div class="expansion-panel list-group-item">
+                            <a aria-controls="collapseOne" aria-expanded="false" class="expansion-panel-toggler collapsed" data-toggle="collapse" href="#collapseOne" id="headingOne">
+                                <span class="font-weight-bold">Coleta</span>
+                                <div class="expansion-panel-icon ml-3 text-black-secondary">
+                                    <i class="collapsed-hide material-icons">keyboard_arrow_down</i>
+                                    <i class="collapsed-show material-icons">keyboard_arrow_up</i>
+                                </div>
+                            </a>
+                            <div aria-labelledby="headingOne" class="collapse" data-parent="#accordionOne" id="collapseOne">
+                                <div class="expansion-panel-body">
+                                    <fieldset>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="floating-label">
+                                                            <label for="txtCEPB">CEP</label>
+                                                            <input type="text" id="txtCEPB" class="form-control" placeholder="CEP">
+                                                        </div>
+                                                        <span class="input-group-icon">
+                                                            <i class="material-icons">location_on</i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row py-3">
+                                            <div class="col text-center">
+                                                OU
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <div class="floating-label">
+                                                        <label for="selStateB">Estado</label>
+                                                        <select class="form-control" id="selStateB">
+                                                            <option></option>
+                                                            <option>Opções A</option>
+                                                            <option>Opções B</option>
+                                                            <option>Opções C</option>
+                                                            <option>Opções D</option>
+                                                            <option>Opções E</option>
+                                                            <option>Opções F</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="floating-label">
+                                                            <label for="txtCityB">Cidade</label>
+                                                            <input type="text" id="txtCityB"
+                                                                   class="form-control"
+                                                                   placeholder="Cidade">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="floating-label">
+                                                            <label for="txtNeighborhoodB">Bairro</label>
+                                                            <input type="text" id="txtNeighborhoodB"
+                                                                   class="form-control"
+                                                                   placeholder="Bairro">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="floating-label">
+                                                            <label for="txtAddressB">Endereço</label>
+                                                            <input type="text" id="txtAddressB"
+                                                                   class="form-control"
+                                                                   placeholder="Endereço">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="floating-label">
+                                                            <label for="txtNumberB">Número</label>
+                                                            <input type="text" id="txtNumberB"
+                                                                   class="form-control"
+                                                                   placeholder="Número">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="floating-label">
+                                                            <label for="txtDateB">Data de coleta</label>
+                                                            <input type="text" id="txtDateB" date-picker
+                                                                   class="form-control is-valid"
+                                                                   placeholder="Selecione uma data">
+                                                        </div>
+                                                        <span class="input-group-icon">
+                                                            <i class="material-icons">event</i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--ENTREGA-->
+
+
+                        <div class="expansion-panel list-group-item">
+                            <a aria-controls="collapseTwo" aria-expanded="false"
+                               class="expansion-panel-toggler collapsed" data-toggle="collapse" href="#collapseTwo" id="headingTwo">
+                                <span class="font-weight-bold">Entrega</span>
+                                <div class="expansion-panel-icon ml-3 text-black-secondary">
+                                    <i class="collapsed-show material-icons">keyboard_arrow_down</i>
+                                    <i class="collapsed-hide material-icons">keyboard_arrow_up</i>
+                                </div>
+                            </a>
+                            <div aria-labelledby="headingTwo" class="collapse" data-parent="#accordionOne"
+                                 id="collapseTwo">
+                                <div class="expansion-panel-body">
+                                    <fieldset>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="floating-label">
+                                                            <label for="txtCEP">CEP</label>
+                                                            <input type="text" id="txtCEP" class="form-control" placeholder="CEP">
+                                                        </div>
+                                                        <span class="input-group-icon">
+                                                            <i class="material-icons">location_on</i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row py-3">
+                                            <div class="col text-center">
+                                                OU
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <div class="floating-label">
+                                                        <label for="selStateA">Estado</label>
+                                                        <select class="form-control" id="selStateA">
+                                                            <option></option>
+                                                            <option>Opções A</option>
+                                                            <option>Opções B</option>
+                                                            <option>Opções C</option>
+                                                            <option>Opções D</option>
+                                                            <option>Opções E</option>
+                                                            <option>Opções F</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="floating-label">
+                                                            <label for="txtCity">Cidade</label>
+                                                            <input type="text" id="txtCity"
+                                                                   class="form-control"
+                                                                   placeholder="Cidade">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="floating-label">
+                                                            <label for="txtNeighborhood">Bairro</label>
+                                                            <input type="text" id="txtNeighborhood"
+                                                                   class="form-control"
+                                                                   placeholder="Bairro">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="floating-label">
+                                                            <label for="txtAddress">Endereço</label>
+                                                            <input type="text" id="txtAddress"
+                                                                   class="form-control"
+                                                                   placeholder="Endereço">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="floating-label">
+                                                            <label for="txtNumber">Número</label>
+                                                            <input type="text" id="txtNumber"
+                                                                   class="form-control"
+                                                                   placeholder="Número">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="floating-label">
+                                                            <label for="txtDateB">Data de entrega</label>
+                                                            <input type="text" id="txtDateB" date-picker
+                                                                   class="form-control is-valid"
+                                                                   placeholder="Selecione uma data">
+                                                        </div>
+                                                        <span class="input-group-icon">
+                                                            <i class="material-icons">event</i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Adicionar Rota</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--FORNECEDORES-->
+<div class="modal fade" id="see-all" tabindex="-1" role="dialog" aria-labelledby="see-all" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Selecione of fornecedores</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row mb-3">
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chkAll">
+                                <label class="custom-control-label" for="chkAll">Selecionar Todos</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row mb-3 pt-3">
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-1">
+                                <label class="custom-control-label" for="chk-1">Ipsum Dapibus Sodales</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-2">
+                                <label class="custom-control-label" for="chk-2">Amet In</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-3">
+                                <label class="custom-control-label" for="chk-3">Elit Proin</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-4">
+                                <label class="custom-control-label" for="chk-4">Dolor Sit</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-5">
+                                <label class="custom-control-label" for="chk-5">Ipsum Commodo</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-6">
+                                <label class="custom-control-label" for="chk-6">Ornare Cras</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-7">
+                                <label class="custom-control-label" for="chk-7">Dolor Adipiscing</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-8">
+                                <label class="custom-control-label" for="chk-8">Sit Proin</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-9">
+                                <label class="custom-control-label" for="chk-9">Sit Cras Commodo</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-10">
+                                <label class="custom-control-label" for="chk-10">Ipsum Cras Gravida</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-11">
+                                <label class="custom-control-label" for="chk-11">Elit Sodales</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-12">
+                                <label class="custom-control-label" for="chk-12">Lorem Sodales</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-13">
+                                <label class="custom-control-label" for="chk-13">Dolor Cras Commodo</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-14">
+                                <label class="custom-control-label" for="chk-14">Dolor Sodales Arcu</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-15">
+                                <label class="custom-control-label" for="chk-15">Proin Sodales</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-16">
+                                <label class="custom-control-label" for="chk-16">Amet Consectetur Sodales</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-17">
+                                <label class="custom-control-label" for="chk-17">Ipsum Elit</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-18">
+                                <label class="custom-control-label" for="chk-18">Sit Elit</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-19">
+                                <label class="custom-control-label" for="chk-19">Dolor Adipiscing Commodo</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-20">
+                                <label class="custom-control-label" for="chk-20">Amet Ornare</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-21">
+                                <label class="custom-control-label" for="chk-21">Lorem Amet Elit</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-22">
+                                <label class="custom-control-label" for="chk-22">Ornare Gravida</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-23">
+                                <label class="custom-control-label" for="chk-23">Ipsum Amet Proin</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-24">
+                                <label class="custom-control-label" for="chk-24">Adipiscing Ornare In</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-25">
+                                <label class="custom-control-label" for="chk-25">Lorem Sit</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-26">
+                                <label class="custom-control-label" for="chk-26">Ipsum Ornare</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-27">
+                                <label class="custom-control-label" for="chk-27">Lorem Ipsum Elit</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-28">
+                                <label class="custom-control-label" for="chk-28">Diam Cras</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-29">
+                                <label class="custom-control-label" for="chk-29">Ipsum Arcu In</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-30">
+                                <label class="custom-control-label" for="chk-30">Lorem Commodo</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-31">
+                                <label class="custom-control-label" for="chk-31">Sit Adipiscing Sodales</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk-32">
+                                <label class="custom-control-label" for="chk-32">Proin Dapibus</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Adicionar Selecionados</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
