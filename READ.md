@@ -4,5 +4,5 @@
 
 ````
 npm install
-lr-http-server
+npm start
 ````

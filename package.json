@@ -4,6 +4,9 @@
   "description": "Arquitetura de informação do projeto Go-Flux",
   "author": "Rene Berwanger <rene-berwanger@outlook.com>",
   "license": "ISC",
+  "scripts": {
+    "start": "lr-http-server"
+  },
   "dependencies": {
     "daemonite-material": "^4.1.1",
     "lr-http-server": "^0.1.5"
