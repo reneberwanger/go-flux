@@ -2,13 +2,10 @@
   "name": "go-flux",
   "version": "1.0.0",
   "description": "Arquitetura de informação do projeto Go-Flux",
-  "main": "node bin/lr-http-server",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Rene Berwanger <rene-berwanger@outlook.com>",
   "license": "ISC",
   "dependencies": {
-    "daemonite-material": "^4.1.1"
+    "daemonite-material": "^4.1.1",
+    "lr-http-server": "^0.1.5"
   }
 }
