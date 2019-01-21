@@ -6,3 +6,6 @@
     box-shadow: none;
 }
 
+.table tr.disabled {
+    opacity: 0.5;
+}
