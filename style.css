@@ -9,6 +9,30 @@
 .table tr.disabled {
     opacity: 0.5;
 }
+.table tr.parent {
+    cursor: pointer;
+}
+.table tr.child {
+    display: none;
+}
+.table tr.child td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.table tr.child td:nth-child(1) {
+    padding-left: 35px;
+}
+.table tr.child td:nth-child(2) {
+    padding-left: 35px;
+}
+.table tr.child td:nth-child(3) {
+    padding-left: 35px;
+}
+.table tr.child td:nth-child(4) {
+    padding-left: 35px;
+}
+
 
 
 @keyframes flickerAnimation {
@@ -23,4 +47,86 @@
 
 .btn .material-icons.text-dark {
     color: #ccc !important;
+}
+
+.card-table .chevron {
+    font-size: 40px;
+}
+
+.card-table tbody td {
+    font-size: 14px;
+}
+
+.offers .card {
+    position: relative;
+    box-shadow: none;
+}
+.offers .card:hover{
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 3px rgba(0,0,0,.12),0 4px 15px 0 rgba(0,0,0,.2)!important;
+}
+
+.offers .card.reverse .title {
+    content: 'Reverso';
+}
+
+.offers .card {
+    border: 1px solid #ff9800;
+}
+
+.offers .card.reverse {
+    border-color: #4caf50;
+}
+
+.offers .card.fixed {
+    border-color: #9c27b0;
+}
+
+.offers .card::before {
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-top: 50px solid #ff9800;
+    border-left: 50px solid transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.offers .reverse::before {
+    border-top: 50px solid #4caf50;
+}
+.offers .fixed::before {
+    border-top: 50px solid #9c27b0;
+}
+
+.filters-type .btn {
+    position: relative;
+}
+
+.filters-type .btn::before {
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+.filters-type .btn.fixed::before {
+    border-top: 10px solid #9c27b0;
+}
+
+.filters-type .btn.reverse::before {
+    border-top: 10px solid #4caf50;
+}
+
+.filters-type .btn.normal::before {
+    border-top: 10px solid #ff9800;
+}
+
+.dropdown-menu form {
+    min-width: 350px;
 }

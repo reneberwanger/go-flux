@@ -1,0 +1,62 @@
+<div class="col-3 pb-5 offers">
+    <div class="card {{type}} {{state}}">
+        <h4 class="p-3 text-center title">Leilão padrão</h4>
+        <h2 class="text-center">{{prices}}</h2>
+        <h5 class="text-center">Peso: {{weights}} Ton</h5>
+
+        <div class="row mt-5 px-4 align-top">
+            <div class="col">
+                <button class="btn btn-outline-dark text-center" data-toggle="popover" data-trigger="hover">
+                    <i class="material-icons">gavel</i>
+                    <h2 class="mt-3">{{bids}}</h2>
+                    <div class="popover invisible">
+                        <h6>Lances dados até o momento:</h6>
+                        <h2>{{bids}}</h2>
+                    </div>
+                </button>
+            </div>
+
+            <div class="col">
+                <button class="btn btn-outline-dark text-center" data-toggle="popover" data-trigger="hover">
+                    <i class="material-icons">local_shipping</i>
+                    <h2 class="mt-3">{{loads}}</h2>
+                    <div class="popover invisible">
+                        <h6>Cargas totais dessas rotas:</h6>
+                        <h2>{{loads}}</h2>
+                    </div>
+                </button>
+            </div>
+
+            <div class="col">
+                <button class="btn btn-outline-dark text-center" data-toggle="popover" data-trigger="hover">
+                    <i class="material-icons">date_range</i>
+                    <h5 class="mt-3">{{start}}</h5>
+                    <h5>{{end}}</h5>
+                    <div class="popover invisible">
+                        <h6>Data de carregamento:</h6>
+                        <p><i class="material-icons">date_range</i> {{start}} </p>
+                        <p><i class="material-icons">access_time</i> 16:00</p>
+                        <h6>Data de entrega:</h6>
+                        <p><i class="material-icons">date_range</i> {{end}} </p>
+                        <p><i class="material-icons">access_time</i> 08:00 </p>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <table class="table table-borderless text-center card-table mt-3">
+            <thead>
+            <tr>
+                <th class="text-center" colspan="3">
+                    Rotas
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            {{routes}}
+            </tbody>
+        </table>
+        <div class="py-3 text-center">
+            <button class="btn btn-primary">Participar</button>
+        </div>
+    </div>
+</div>
