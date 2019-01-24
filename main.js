@@ -158,6 +158,7 @@ $(document).ready(function () {
 
     $('.table').on('click', '.parent', function () {
        $(this).parent('tbody').find('.child').toggle(500);
+       $(this).find('.toggle').toggleClass('d-none');
     });
 
 
