@@ -1,8 +1,12 @@
-<div class="col-3 pb-5 offers">
-    <div class="card {{type}} {{state}}">
+<div class="col-3 pb-5 offers" data-state="{{state}}" data-price="{{prices}}" data-type="{{type}}" data-date="{{start}}">
+    <div class="card {{type}} {{state}}" >
+        <i class="material-icons star d-none">star</i>
+        <i class="material-icons warning animate-flicker">warning</i>
         <h4 class="p-3 text-center title">Leilão padrão</h4>
         <h2 class="text-center">{{prices}}</h2>
         <h5 class="text-center">Peso: {{weights}} Ton</h5>
+        <h5 class="text-center winner text-success">Você está vencendo</h5>
+        <h5 class="text-center loser text-danger animate-flicker">Seu lance foi coberto</h5>
 
         <div class="row mt-5 px-4 align-top">
             <div class="col">
@@ -56,7 +60,7 @@
             </tbody>
         </table>
         <div class="py-3 text-center">
-            <button class="btn btn-primary">Participar</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#details-modal">Participar</button>
         </div>
     </div>
 </div>

@@ -1,5 +1,6 @@
 $(document).ready(function () {
     var $grid = $('.grid');
+    var EQ = 0;
 
     $.get('card.html', function (html) {
         for (var index = 0; index < 60; index++) {
@@ -119,11 +120,32 @@ $(document).ready(function () {
         $grid.find('.card.normal .btn-primary').removeClass('btn-primary').addClass('btn-warning');
 
         $grid.isotope({
-            itemSelector: '.offers'
+            itemSelector: '.offers',
+            getSortData: {
+                favorite: function (item) {
+                    return !$(item).find('.card').is('.favorite');
+                },
+                expired: function (item) {
+                    return !$(item).find('.card').is('.expirados');
+                },
+                state: function (item) {
+                    return $(item).data('state');
+                },
+                type: function (item) {
+                    return $(item).data('type');
+                },
+                date: function (item) {
+                    return $(item).data('date');
+                },
+                price: function (item) {
+                    return parseFloat($(item).data('price').replace('.', '').replace(',', '.'));
+                }
+            }
         });
 
 
         declarePopOvers();
+
 
     });
 
@@ -138,15 +160,15 @@ $(document).ready(function () {
             filter: function () {
                 return $(this).find('.' + type).length;
             }
-        })
+        });
     });
 
     $('.filters-type').on('change', '[data-range]', function (e) {
         var init = $('[data-range="init"]').val();
         var end = $('[data-range="end"]').val();
 
-        $('[data-init-label]').text(new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(init));
-        $('[data-end-label]').text(new Intl.NumberFormat('pt-BR',{ style: 'currency', currency: 'BRL' }).format(end));
+        $('[data-init-label]').text(new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(init));
+        $('[data-end-label]').text(new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(end));
 
         $grid.isotope({
             filter: function () {
@@ -156,15 +178,53 @@ $(document).ready(function () {
         });
     });
 
+    $('.sort-type').on('click', '[data-type]', function () {
+        var type = $(this).data('type');
+        console.log(type);
+        $grid.isotope('updateSortData');
+        $grid.isotope({sortBy: type});
+    });
+
+
     $('.table').on('click', '.parent', function () {
-       $(this).parent('tbody').find('.child').toggle(500);
-       $(this).find('.toggle').toggleClass('d-none');
+        $(this).parent('tbody').find('.child').toggle(500);
+        $(this).find('.toggle').toggleClass('d-none');
+    });
+
+    $('[data-toggle="filters"]').on('click', function () {
+        $('.filters').toggleClass('d-none');
+    });
+
+    $('body').on('click', '.star', function () {
+        $(this).addClass('d-none');
+        $(this).parents('.card').removeClass('favorite');
+        $grid.isotope('updateSortData');
+        $grid.isotope({sortBy: 'favorite'});
+    });
+
+    $('body').on('click', '[data-toggle="modal"]', function () {
+        eq = $(this).parents('.offers').index('.offers');
+        console.log(eq);
+    });
+
+    $('[data-action="participate"]').on('click', function () {
+        $('.offers:eq(' + eq + ')').find('.star').removeClass('d-none');
+        $('.offers:eq(' + eq + ')').find('.card').addClass('favorite');
+        $('.offers:eq(' + eq + ')').find('.card').removeClass('expired');
+        $grid.isotope('updateSortData');
+        $grid.isotope({sortBy: 'favorite'});
+        $('html, body').animate({scrollTop: 0}, 500);
     });
 
 
     $('[date-picker]').pickdate();
     $('[data-toggle="tooltip"]').tooltip();
     declarePopOvers();
+
+
+    window.setInterval(function() {
+        $('.offers .favorite').random().addClass('expired');
+    },10000);
 
 });
 
@@ -196,3 +256,9 @@ function randonInt(min, max) // min and max included
 {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
+
+
+jQuery.fn.random = function() {
+    var randomIndex = Math.floor(Math.random() * this.length);
+    return jQuery(this[randomIndex]);
+};

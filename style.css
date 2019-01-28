@@ -81,6 +81,23 @@
     border-color: #9c27b0;
 }
 
+.offers .card .star {
+    position: absolute;
+    top: 7px;
+    right: 2px;
+    color: white;
+    cursor: pointer;
+}
+
+.offers .card .warning {
+    position: absolute;
+    top: 7px;
+    left: 2px;
+    color: white;
+    border-radius: 50%;
+    z-index: 20;
+}
+
 .offers .card::before {
     content: ' ';
     width: 0;
@@ -90,6 +107,33 @@
     position: absolute;
     right: 0;
     top: 0;
+}
+
+.offers .card.favorite.expired::after {
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-top: 50px solid red;
+    border-right: 50px solid transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.offers .card .winner,.offers .card .loser  {
+    display: none;
+}
+
+.offers .card.favorite .winner {
+    display: block;
+}
+
+.offers .card.favorite.expired .winner {
+    display: none;
+}
+
+.offers .card.favorite.expired .loser {
+    display: block;
 }
 
 .offers .reverse::before {
